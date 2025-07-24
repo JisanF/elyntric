@@ -1,156 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PT9LN60SH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1PT9LN60SH');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PT9LN60SH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1PT9LN60SH');
+  </script>
   <meta charset="UTF-8" />
-  <title>x</title>
-  <link rel="icon" type="image" href="/i.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+  <!-- SEO Title -->
+  <title>Elyntric X – Experiments & Secret Features (Coming Soon)</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Elyntric X is where experimental features and future tools are tested. Get a sneak peek at what’s coming next for ethical online business building.">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Elyntric X – Experiments & Secret Features (Coming Soon)">
+  <meta property="og:description" content="Elyntric X is where experimental features and future tools are tested. Get a sneak peek at what’s coming next for ethical online business building.">
+  <meta property="og:image" content="https://elyntric.online/i.png">
+  <meta property="og:url" content="https://elyntric.online/x">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elyntric X – Experiments & Secret Features (Coming Soon)">
+  <meta name="twitter:description" content="Elyntric X is where experimental features and future tools are tested. Get a sneak peek at what’s coming next for ethical online business building.">
+  <meta name="twitter:image" content="https://elyntric.online/i.png">
+
+  <link rel="icon" type="image" href="/i.png" />
 
   <style>
-    body,
-    html,
-    #app {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    #app {
-      overflow: hidden;
-      color: #ffffff;
-      font-family: 'Montserrat',
-        sans-serif;
-      text-align: center;
-      text-shadow: 0 0 5px #ffffff, 0 0 20px #000,
-        0 0 30px #000;
-    }
-
-    #app h1 {
-      --fontSize: 60px;
-      --lineHeight: 80px;
-      width: auto;
-      height: calc(2 * var(--lineHeight));
-      line-height: var(--lineHeight);
-      margin: calc(50vh - var(--lineHeight)) auto 0;
-      font-size: var(--fontSize);
-    }
-
-    #app a {
-      margin-top: 10px;
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-    }
-
-    #app canvas {
-      display: block;
-      position: fixed;
-      z-index: -1;
-      top: 0;
-    }
-
-    /* -- External Social Link CSS Styles -- */
-
-    #source-link {
-      top: 120px;
-    }
-
-    #source-link>i {
-      color: rgb(94, 106, 210);
-    }
-
-    #yt-link {
-      top: 65px;
-    }
-
-    #yt-link>i {
-      color: rgb(219, 31, 106);
-
-    }
-
-    #Fund-link {
-      top: 10px;
-    }
-
-    #Fund-link>i {
-      color: rgb(255, 251, 0);
-
-    }
-
-    .meta-link {
-      align-items: center;
-      backdrop-filter: blur(3px);
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      display: inline-flex;
-      gap: 5px;
-      left: 10px;
-      padding: 10px 20px;
-      position: fixed;
-      text-decoration: none;
-      transition: background-color 600ms, border-color 600ms;
-      z-index: 10000;
-    }
-
-    .meta-link:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .meta-link>i,
-    .meta-link>span {
-      height: 20px;
-      line-height: 20px;
-    }
-
-    .meta-link>span {
-      color: white;
-      font-family: "Rubik", sans-serif;
-      transition: color 600ms;
-    }
-    /* Original Homepage CSS */
-    * {
+    /* Reset + Fullscreen Fix */
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* ensures cursor fills screen */
+      background: radial-gradient(circle at center, #0f0f0f, #000000 100%);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    body {
-      background: radial-gradient(circle at center, #0f0f0f, #000000 100%);
-      color: white;
-      height: 100vh;
+    #app {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 20px;
+      color: #fff;
+      position: relative;
     }
 
     .glow-text {
       font-size: 5rem;
       font-weight: bold;
-      position: relative;
-      margin: 20px 0;
       background: linear-gradient(90deg, #00f0ff, #4f46e5, #8b5cf6);
       background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: pulseGlow 3s ease-in-out infinite;
+      margin: 20px 0;
     }
 
     .tagline {
@@ -160,8 +73,12 @@
       opacity: 0.85;
     }
 
-    .home-icon {
+    a.home-link {
+      display: inline-block;
       margin-top: 40px;
+    }
+
+    .home-icon {
       width: 60px;
       height: 60px;
       fill: white;
@@ -171,10 +88,6 @@
     .home-icon:hover {
       transform: scale(1.1);
       fill: #00ffff;
-    }
-
-    a.home-link {
-      display: inline-block;
     }
 
     @keyframes pulseGlow {
@@ -195,16 +108,18 @@
 </head>
 <body>
   <div id="app">
-    <div id="hero">
-      <div class="glow-text">Coming soon...</div>
-      <p class="tagline">Elyntric is supported by incredible partners & early believers <br/> who make it- possible for a small focused team to build useful systems. <br/> (We’re building something powerful behind the scenes) <br/>[~JISAN 💬]</p>
+    <div class="glow-text">Coming soon...</div>
+    <p class="tagline">
+      Elyntric is supported by incredible partners & early believers <br/>
+      who make it possible for a small focused team to build useful systems. <br/>
+      (We’re building something powerful behind the scenes) <br/>[~JISAN 💬]
+    </p>
 
-      <a href="https://elyntric.online" class="home-link" title="Go Home">
-        <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M3 9.75L12 3l9 6.75V21a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 21V9.75zM12 5.25L5.25 10.5v10.5h4.5V15a1.5 1.5 0 0 1 3 0v6h4.5V10.5L12 5.25z"/>
-        </svg>
-      </a>
-    </div>
+    <a href="https://elyntric.online" class="home-link" title="Go Home">
+      <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M3 9.75L12 3l9 6.75V21a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 21V9.75zM12 5.25L5.25 10.5v10.5h4.5V15a1.5 1.5 0 0 1 3 0v6h4.5V10.5L12 5.25z"/>
+      </svg>
+    </a>
   </div>
 
   <script type="module">
@@ -229,31 +144,8 @@
     document.addEventListener('mousemove', (event) => {
       const mouseX = event.clientX / window.innerWidth;
       const mouseY = 1 - event.clientY / window.innerHeight;
-
       pc.uniforms.uMousePos.value.set(mouseX, mouseY);
     });
-
-    document.body.addEventListener('click', () => {
-      pc.uniforms.uColor.value.set(Math.random() * 0xffffff);
-      pc.uniforms.uCoordScale.value = 0.001 + Math.random() * 2;
-      pc.uniforms.uNoiseIntensity.value = 0.0001 + Math.random() * 0.001;
-      pc.uniforms.uPointSize.value = 1 + Math.random() * 10;
-    });
-
-    document.body.addEventListener('click', () => {
-      pc.uniforms.uColor.value.set(Math.random() * 0xffffff);
-      pc.uniforms.uCoordScale.value = 0.001 + Math.random() * 2;
-      pc.uniforms.uNoiseIntensity.value = 0.0001 + Math.random() * 0.001;
-      pc.uniforms.uPointSize.value = 1 + Math.random() * 10;
-
-      setTimeout(() => {
-        pc.uniforms.uColor.value.set(0x000000);
-        pc.uniforms.uCoordScale.value = 0.001;
-        pc.uniforms.uNoiseIntensity.value = 0.0001;
-        pc.uniforms.uPointSize.value = 0;
-      }, 2000);
-    });
-
   </script>
 </body>
 </html>
