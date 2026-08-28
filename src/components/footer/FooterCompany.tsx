@@ -10,7 +10,7 @@ const FooterCompany: React.FC<FooterCompanyProps> = ({ scrollToSection }) => {
       <h3 className="text-xl md:text-2xl lg:text-xl font-bold text-gray-800 dark:text-white">Company</h3>
       <div className="space-y-3 lg:space-y-4">
         <a 
-          href="https://elyntric-about.infy.uk"
+          href="https://elyntric.vercel.app/about"
           className="relative block text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-all duration-300 text-base md:text-lg lg:text-base group overflow-hidden"
         >
           <span className="relative z-10">About</span>

@@ -104,7 +104,7 @@ const Reviews: React.FC = () => {
         <AnimatedSection delay={600} animation="fade-up">
           <div className="text-center">
             <a
-              href="https://elyntric-start.infy.uk"
+              href="https://elyntric.vercel.app/quiz"
               className="relative group bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 dark:hover:shadow-pink-500/25 transform hover:-translate-y-1 overflow-hidden inline-flex items-center"
             >
               <span className="relative z-10 flex items-center">

@@ -50,7 +50,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
               </p>
               <div className="flex flex-wrap justify-center md:justify-end space-x-3 lg:space-x-4">
                 <a
-                  href="https://elyntric-about.infy.uk"
+                  href="https://elyntric.vercel.app/about"
                   className="relative text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-all duration-300 text-base md:text-lg lg:text-base group overflow-hidden"
                 >
                   <span className="relative z-10">Privacy Policy</span>
@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                 </a>
                 <a
-                  href="https://elyntric-about.infy.uk"
+                  href="https://elyntric.vercel.app/about"
                   className="relative text-gray-600 dark:text-gray-400 hover:text-green-500 dark:hover:text-green-400 transition-all duration-300 text-base md:text-lg lg:text-base group overflow-hidden"
                 >
                   <span className="relative z-10">Terms of Service</span>
@@ -66,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                   <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                 </a>
                 <a
-                  href="https://elyntric-about.infy.uk"
+                  href="https://elyntric.vercel.app/about"
                   className="relative text-gray-600 dark:text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-400 transition-all duration-300 text-base md:text-lg lg:text-base group overflow-hidden"
                 >
                   <span className="relative z-10">Cookies</span>

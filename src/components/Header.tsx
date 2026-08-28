@@ -104,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({
             </button>
 
             <a
-              href="https://elyntric-about.infy.uk"
+              href="https://elyntric.vercel.app/about"
               className="relative group px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-green-400 dark:hover:text-green-400 transition-all duration-300 overflow-hidden flex items-center space-x-2"
             >
               <span className="relative z-10 flex items-center space-x-2">
@@ -131,7 +131,7 @@ const Header: React.FC<HeaderProps> = ({
             </button>
 
             <a
-              href="https://elyntric-start.infy.uk"
+              href="https://elyntric.vercel.app/quiz"
               className="relative group px-4 sm:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 active:scale-95 text-white font-semibold rounded-lg transition-all duration-300 overflow-hidden shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 transform"
             >
               <span className="relative z-10 flex items-center space-x-2">
@@ -194,7 +194,7 @@ const Header: React.FC<HeaderProps> = ({
                 </span>
               </button>
               <a
-                href="https://elyntric-about.infy.uk"
+                href="https://elyntric.vercel.app/about"
                 className="w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150 flex items-center space-x-2"
               >
                 <User className="w-4 h-4" />

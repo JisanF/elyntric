@@ -29,7 +29,7 @@ const About: React.FC = () => {
         <AnimatedSection delay={600} animation="fade-in">
           <div className="mt-12">
             <a
-              href="https://elyntric-about.infy.uk"
+              href="https://elyntric.vercel.app/about"
               className="relative group bg-gradient-to-r from-green-500 to-cyan-600 hover:from-green-400 hover:to-cyan-500 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:-translate-y-1 overflow-hidden inline-flex items-center justify-center"
             >
               <span className="relative z-10 flex items-center">

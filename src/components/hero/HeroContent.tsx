@@ -41,7 +41,7 @@ const HeroContent: React.FC = () => {
 
       <AnimatedSection delay={600} animation="scale-up">
         <a
-          href="https://elyn-chat.infy.uk"
+          href="https://elyntric.vercel.app/ai"
           className="relative group bg-gradient-to-r from-cyan-500 to-gray-600 hover:from-black hover:to-cyan-500 text-black font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 transform hover:-translate-y-1 overflow-hidden inline-flex items-center justify-center"
         >
           <span className="relative z-10 flex items-center">

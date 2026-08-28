@@ -16,7 +16,7 @@ const HowItWorks: React.FC = () => {
           {/* Smart Quiz Card */}
           <AnimatedSection delay={0} animation="slide-left">
             <a
-              href="https://elyntric-x.infy.uk"
+              href="https://elyntric.vercel.app/x"
               className="relative group bg-white dark:bg-gray-800/50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg hover:shadow-blue-500/20 dark:hover:shadow-blue-400/20 active:scale-95 transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block transform"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/30 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -34,7 +34,7 @@ const HowItWorks: React.FC = () => {
           {/* Personalized Roadmaps Card */}
           <AnimatedSection delay={150} animation="slide-right">
             <a
-              href="https://elyntric-x.infy.uk"
+              href="https://elyntric.vercel.app/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -52,7 +52,7 @@ const HowItWorks: React.FC = () => {
           {/* Beginner Guidance Card */}
           <AnimatedSection delay={300} animation="fade-up">
             <a
-              href="https://elyntric-x.infy.uk"
+              href="https://elyntric.vercel.app/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -70,7 +70,7 @@ const HowItWorks: React.FC = () => {
           {/* Path Planning Card */}
           <AnimatedSection delay={450} animation="fade-up">
             <a
-              href="https://elyntric-x.infy.uk"
+              href="https://elyntric.vercel.app/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -88,7 +88,7 @@ const HowItWorks: React.FC = () => {
           {/* Online Consulting Card */}
           <AnimatedSection delay={600} animation="slide-left">
             <a
-              href="https://elyntric-x.infy.uk"
+              href="https://elyntric.vercel.app/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -106,7 +106,7 @@ const HowItWorks: React.FC = () => {
           {/* Start Free Card */}
           <AnimatedSection delay={750} animation="slide-right">
             <a
-              href="https://elyntric-x.infy.uk"
+              href="https://elyntric.vercel.app/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
