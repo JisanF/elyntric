@@ -1,6 +1,7 @@
 import React from 'react';
 import { Brain, Target, Users, CheckCircle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { Link } from '../router';
 
 const HowItWorks: React.FC = () => {
   return (
@@ -15,8 +16,8 @@ const HowItWorks: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Smart Quiz Card */}
           <AnimatedSection delay={0} animation="slide-left">
-            <a
-              href="https://elyntric.vercel.app/x"
+            <Link
+              to="/x"
               className="relative group bg-white dark:bg-gray-800/50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg hover:shadow-blue-500/20 dark:hover:shadow-blue-400/20 active:scale-95 transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block transform"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/30 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -28,13 +29,13 @@ const HowItWorks: React.FC = () => {
                 </p>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/30 to-purple-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </a>
+            </Link>
           </AnimatedSection>
 
           {/* Personalized Roadmaps Card */}
           <AnimatedSection delay={150} animation="slide-right">
-            <a
-              href="https://elyntric.vercel.app/x"
+            <Link
+              to="/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -46,13 +47,13 @@ const HowItWorks: React.FC = () => {
                 </p>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/0 via-green-400/30 to-blue-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </a>
+            </Link>
           </AnimatedSection>
 
           {/* Beginner Guidance Card */}
           <AnimatedSection delay={300} animation="fade-up">
-            <a
-              href="https://elyntric.vercel.app/x"
+            <Link
+              to="/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -64,13 +65,13 @@ const HowItWorks: React.FC = () => {
                 </p>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/30 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </a>
+            </Link>
           </AnimatedSection>
 
           {/* Path Planning Card */}
           <AnimatedSection delay={450} animation="fade-up">
-            <a
-              href="https://elyntric.vercel.app/x"
+            <Link
+              to="/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -82,13 +83,13 @@ const HowItWorks: React.FC = () => {
                 </p>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-purple-400/30 to-pink-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </a>
+            </Link>
           </AnimatedSection>
 
           {/* Online Consulting Card */}
           <AnimatedSection delay={600} animation="slide-left">
-            <a
-              href="https://elyntric.vercel.app/x"
+            <Link
+              to="/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -100,13 +101,13 @@ const HowItWorks: React.FC = () => {
                 </p>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/30 to-blue-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </a>
+            </Link>
           </AnimatedSection>
 
           {/* Start Free Card */}
           <AnimatedSection delay={750} animation="slide-right">
-            <a
-              href="https://elyntric.vercel.app/x"
+            <Link
+              to="/x"
               className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -118,7 +119,7 @@ const HowItWorks: React.FC = () => {
                 </p>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/0 via-green-400/30 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </a>
+            </Link>
           </AnimatedSection>
         </div>
       </div>

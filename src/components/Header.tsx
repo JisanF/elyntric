@@ -13,6 +13,7 @@ import {
   Zap,
   Cog
 } from 'lucide-react';
+import { Link } from '../router';
 
 interface HeaderProps {
   isDarkMode: boolean;
@@ -103,8 +104,8 @@ const Header: React.FC<HeaderProps> = ({
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400/15 via-red-500/15 to-pink-600/15 dark:from-orange-400/25 dark:via-red-400/25 dark:to-pink-400/25 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </button>
 
-            <a
-              href="https://elyntric.vercel.app/about"
+            <Link
+              to="/about"
               className="relative group px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-green-400 dark:hover:text-green-400 transition-all duration-300 overflow-hidden flex items-center space-x-2"
             >
               <span className="relative z-10 flex items-center space-x-2">
@@ -113,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/30 to-cyan-500/0 dark:from-green-400/0 dark:via-green-400/40 dark:to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/15 via-cyan-500/15 to-blue-600/15 dark:from-green-400/25 dark:via-cyan-400/25 dark:to-blue-400/25 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -130,8 +131,8 @@ const Header: React.FC<HeaderProps> = ({
               )}
             </button>
 
-            <a
-              href="https://elyntric.vercel.app/quiz"
+            <Link
+              to="/quiz"
               className="relative group px-4 sm:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 active:scale-95 text-white font-semibold rounded-lg transition-all duration-300 overflow-hidden shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 transform"
             >
               <span className="relative z-10 flex items-center space-x-2">
@@ -141,7 +142,7 @@ const Header: React.FC<HeaderProps> = ({
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/30 to-blue-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
               <div className="absolute inset-0 bg-white/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-            </a>
+            </Link>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -193,13 +194,13 @@ const Header: React.FC<HeaderProps> = ({
                   <span>Support Need?</span>
                 </span>
               </button>
-              <a
-                href="https://elyntric.vercel.app/about"
+              <Link
+                to="/about"
                 className="w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150 flex items-center space-x-2"
               >
                 <User className="w-4 h-4" />
                 <span>About Us</span>
-              </a>
+              </Link>
             </div>
           </div>
         )}

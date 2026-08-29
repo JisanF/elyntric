@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Star, Headphones, ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { Link } from '../router';
 
 declare global {
   interface Window {
@@ -103,8 +104,8 @@ const Reviews: React.FC = () => {
 
         <AnimatedSection delay={600} animation="fade-up">
           <div className="text-center">
-            <a
-              href="https://elyntric.vercel.app/quiz"
+            <Link
+              to="/quiz"
               className="relative group bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 dark:hover:shadow-pink-500/25 transform hover:-translate-y-1 overflow-hidden inline-flex items-center"
             >
               <span className="relative z-10 flex items-center">
@@ -113,7 +114,7 @@ const Reviews: React.FC = () => {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-400/0 via-pink-400/30 to-purple-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
               <div className="absolute inset-0 bg-white/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-            </a>
+            </Link>
           </div>
         </AnimatedSection>
       </div>
