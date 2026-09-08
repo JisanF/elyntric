@@ -1,5 +1,5 @@
 import React, { FormEvent, useEffect, useRef, useState } from 'react';
-import { ArrowUp, Brain, Compass, Lightbulb, Rocket, Sparkles } from 'lucide-react';
+import { ArrowUp, ChevronDown, Compass, Lightbulb, Rocket, Sparkles } from 'lucide-react';
 import { Link } from '../router';
 
 interface Message {
@@ -52,58 +52,54 @@ const AiPage: React.FC = () => {
   const showGreeting = messages.length === 0;
 
   return (
-    <main className="flex h-[calc(100dvh-4rem)] min-h-[560px] flex-col bg-white dark:bg-slate-950">
-      {/* Top bar */}
-      <header className="flex shrink-0 items-center justify-between border-b border-slate-200 px-4 py-2.5 dark:border-slate-800">
-        <Link to="/" className="group inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
-          <span className="text-base">←</span> Home
+    <main className="flex h-[100dvh] flex-col bg-white pt-16 dark:bg-slate-950">
+      {/* Header bar */}
+      <header className="flex shrink-0 items-center justify-between px-3 py-3 sm:px-5">
+        <Link to="/" className="flex items-center gap-1.5 text-sm font-medium text-slate-500 transition-colors hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
+          <span className="text-lg leading-none">←</span>
+          <span className="hidden sm:inline">Home</span>
         </Link>
-        <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 text-white">
-            <Brain className="h-4 w-4" />
-          </span>
+        <button className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800">
           elynAI
-        </div>
+          <ChevronDown className="h-4 w-4 text-slate-400" />
+        </button>
+        <Link to="/quiz" className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700">
+          Quiz
+        </Link>
       </header>
 
-      {/* Messages */}
+      {/* Messages / Greeting */}
       <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto">
-        <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           {showGreeting ? (
-            <div className="flex flex-col items-center justify-center pt-10 text-center sm:pt-20">
-              <div className="relative mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 text-white shadow-xl shadow-cyan-500/20">
-                  <Sparkles className="h-8 w-8" />
-                </div>
-                <div className="absolute -inset-2 -z-10 rounded-3xl bg-cyan-400/20 blur-2xl" />
-              </div>
-              <h1 className="text-2xl font-semibold tracking-tight text-slate-800 dark:text-slate-100 sm:text-3xl">
-                Hi, I'm elynAI
+            <div className="flex min-h-full flex-col justify-center py-8">
+              <h1 className="text-3xl font-semibold tracking-tight text-slate-800 dark:text-slate-100 sm:text-4xl">
+                Hi, <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent dark:from-cyan-400 dark:to-blue-500">Jisan</span>
               </h1>
-              <p className="mt-2 max-w-md text-sm text-slate-500 dark:text-slate-400 sm:text-base">
-                I help confused beginners find a clear path to start online. Ask me anything or try a suggestion below.
+              <p className="mt-3 text-base text-slate-500 dark:text-slate-400 sm:text-lg">
+                I'm elynAI — I help confused beginners find a clear path to start online.
               </p>
 
-              <div className="mt-10 grid w-full max-w-xl grid-cols-1 gap-3 sm:grid-cols-2">
+              <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-10">
                 {greetingSuggestions.map((s) => {
                   const Icon = s.icon;
                   return (
                     <button
                       key={s.text}
                       onClick={() => send(s.text)}
-                      className="group flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-left transition-all hover:border-cyan-400 hover:bg-slate-50 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-cyan-500 dark:hover:bg-slate-800"
+                      className="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-left transition-all hover:border-cyan-400 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-cyan-500"
                     >
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-cyan-50 text-cyan-600 transition-colors group-hover:bg-cyan-100 dark:bg-cyan-500/10 dark:text-cyan-400">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-400">
                         <Icon className="h-5 w-5" />
                       </span>
-                      <span className="pt-1.5 text-sm font-medium text-slate-700 dark:text-slate-200">{s.text}</span>
+                      <span className="text-sm font-medium leading-snug text-slate-700 dark:text-slate-200">{s.text}</span>
                     </button>
                   );
                 })}
               </div>
             </div>
           ) : (
-            <div className="space-y-8">
+            <div className="space-y-6 py-6">
               {messages.map((msg, i) => (
                 <div key={i} className={msg.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
                   {msg.role === 'assistant' && (
@@ -114,8 +110,8 @@ const AiPage: React.FC = () => {
                   <div
                     className={
                       msg.role === 'user'
-                        ? 'max-w-[80%] rounded-3xl rounded-br-lg bg-gradient-to-br from-cyan-500 to-blue-600 px-5 py-3 text-sm leading-7 text-white shadow-lg shadow-cyan-500/10 sm:text-[15px]'
-                        : 'max-w-[80%] rounded-3xl rounded-bl-lg bg-slate-100 px-5 py-3 text-sm leading-7 text-slate-800 dark:bg-slate-800 dark:text-slate-100 sm:text-[15px]'
+                        ? 'max-w-[80%] rounded-3xl rounded-br-md bg-gradient-to-br from-cyan-500 to-blue-600 px-5 py-3 text-sm leading-7 text-white shadow-lg shadow-cyan-500/10 sm:text-[15px]'
+                        : 'max-w-[80%] rounded-3xl rounded-bl-md bg-slate-100 px-5 py-3 text-sm leading-7 text-slate-800 dark:bg-slate-800 dark:text-slate-100 sm:text-[15px]'
                     }
                   >
                     {msg.content}
@@ -127,7 +123,7 @@ const AiPage: React.FC = () => {
                   <div className="mr-3 mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-white">
                     <Sparkles className="h-4 w-4" />
                   </div>
-                  <div className="rounded-3xl rounded-bl-lg bg-slate-100 px-5 py-4 dark:bg-slate-800">
+                  <div className="rounded-3xl rounded-bl-md bg-slate-100 px-5 py-4 dark:bg-slate-800">
                     <div className="flex gap-1.5">
                       <span className="h-2 w-2 animate-bounce rounded-full bg-slate-400" />
                       <span className="h-2 w-2 animate-bounce rounded-full bg-slate-400 [animation-delay:150ms]" />
@@ -141,10 +137,10 @@ const AiPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Input */}
-      <div className="shrink-0 px-4 pb-4 sm:px-6 sm:pb-5">
+      {/* Input bar */}
+      <div className="shrink-0 px-3 pb-4 pt-2 sm:px-6">
         <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
-          <div className="flex items-end gap-2 rounded-[28px] border border-slate-200 bg-slate-50 p-2 pl-5 shadow-sm transition-all focus-within:border-cyan-500 focus-within:shadow-md dark:border-slate-700 dark:bg-slate-900">
+          <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 py-1.5 pl-5 pr-1.5 shadow-sm transition-all focus-within:border-cyan-500 focus-within:shadow-md dark:border-slate-700 dark:bg-slate-900">
             <input
               aria-label="Message elynAI"
               type="text"
@@ -152,18 +148,17 @@ const AiPage: React.FC = () => {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask elynAI anything..."
               disabled={isLoading}
-              className="min-w-0 flex-1 bg-transparent py-2.5 text-sm text-slate-900 outline-none placeholder:text-slate-400 dark:text-white sm:text-[15px]"
+              className="min-w-0 flex-1 bg-transparent text-sm text-slate-900 outline-none placeholder:text-slate-400 dark:text-white sm:text-[15px]"
             />
             <button
               type="submit"
               aria-label="Send message"
               disabled={isLoading || !input.trim()}
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-800 text-white transition-all hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-30 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-800 text-white transition-all hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-30 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
             >
               <ArrowUp className="h-5 w-5" />
             </button>
           </div>
-          <p className="mt-2 text-center text-[11px] text-slate-400">elynAI can help you explore ideas. Your progress is still yours to build.</p>
         </form>
       </div>
     </main>

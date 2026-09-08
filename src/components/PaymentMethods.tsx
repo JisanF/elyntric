@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const PaymentMethods: React.FC = () => {
@@ -68,21 +67,6 @@ const PaymentMethods: React.FC = () => {
         </div>
 
         <AnimatedSection delay={600} animation="fade-up">
-          <a
-            href="https://elyntric.gumroad.com/l/X"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 transform hover:-translate-y-1 overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center">
-              Get the Full Guide
-              <ArrowUpRight className="w-5 h-5 ml-2" />
-            </span>
-            <div className="absolute inset-0 bg-white/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-          </a>
-        </AnimatedSection>
-
-        <AnimatedSection delay={750} animation="fade-up">
           <p className="text-gray-600 dark:text-gray-400 text-sm mt-6">
             All payments are processed securely with industry-standard encryption
           </p>
