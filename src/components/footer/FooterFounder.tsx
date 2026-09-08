@@ -8,7 +8,7 @@ const FooterFounder: React.FC = () => {
       <h3 className="text-xl md:text-2xl lg:text-xl font-bold text-gray-800 dark:text-white">Founded by</h3>
       <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg lg:text-base leading-relaxed">
         <a 
-          href="https://wa.me/+8801748685833" 
+          href="https://wa.me/+8801344224546" 
           target="_blank" 
           rel="noopener noreferrer"
           className="font-semibold text-gray-800 dark:text-white hover:text-green-500 dark:hover:text-green-400 transition-colors duration-300"
