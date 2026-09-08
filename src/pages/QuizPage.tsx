@@ -123,6 +123,15 @@ const QuizPage: React.FC = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://elyntric.gumroad.com/l/X"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg shadow-amber-500/20 transform hover:-translate-y-1 inline-flex items-center justify-center"
+                >
+                  Open Your Full Guide
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
                 <Link
                   to="/ai"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 transform hover:-translate-y-1 inline-flex items-center justify-center"

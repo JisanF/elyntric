@@ -1,105 +1,154 @@
 import React from 'react';
-import { ArrowLeft, Brain, Target, Users, CheckCircle, Zap, Star, Headphones } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Compass, Map, PencilRuler, Rocket, Sparkles, Target } from 'lucide-react';
 import { Link } from '../router';
 import AnimatedSection from '../components/AnimatedSection';
 
-const features = [
-  { icon: Brain, title: 'Smart Quiz', desc: 'AI-powered assessment to identify your strengths and optimal path forward', color: 'blue', link: '/quiz' },
-  { icon: Target, title: 'Personalized Roadmaps', desc: 'Custom step-by-step plans designed specifically for your goals and experience level', color: 'green', link: '/quiz' },
-  { icon: Users, title: 'Beginner Guidance', desc: 'Comprehensive support and mentoring for those just starting their online journey', color: 'blue', link: '/ai' },
-  { icon: Target, title: 'Path Planning', desc: 'Strategic planning to help you navigate from confusion to clarity and success', color: 'purple', link: '/quiz' },
-  { icon: Brain, title: 'Online Consulting', desc: 'One-on-one expert consultation to accelerate your online business growth', color: 'cyan', link: '/ai' },
-  { icon: CheckCircle, title: 'Start Free', desc: 'Begin implementing your roadmap immediately with free resources and guidance', color: 'green', link: '/quiz' },
+const stages = [
+  {
+    eyebrow: 'Step 01',
+    title: 'Start where you are',
+    body: 'You do not need a polished idea or a big budget. Tell us what you already enjoy, how much time you can spare, and what feels unclear. We turn that into a starting line instead of a wall.',
+    image: 'https://images.pexels.com/photos/6774944/pexels-photo-6774944.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    align: 'left' as const,
+    icon: Compass,
+  },
+  {
+    eyebrow: 'Step 02',
+    title: 'Map a path that fits your life',
+    body: 'Your plan should match your real schedule, not a generic template. We break the first 30 days into small, repeatable actions so progress stops feeling random and starts feeling like a rhythm.',
+    image: 'https://images.pexels.com/photos/6476797/pexels-photo-6476797.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    align: 'right' as const,
+    icon: Map,
+  },
+  {
+    eyebrow: 'Step 03',
+    title: 'Build something you can show',
+    body: 'Theory fades fast. Each step produces a small piece of work you can share, whether that is a post, a simple product, or a service offer. Showing your work is how clarity arrives.',
+    image: 'https://images.pexels.com/photos/19148312/pexels-photo-19148312.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    align: 'left' as const,
+    icon: PencilRuler,
+  },
+  {
+    eyebrow: 'Step 04',
+    title: 'Grow with feedback, not guesswork',
+    body: 'Once something small is live, the next move is to listen. We help you read the response, adjust one thing at a time, and compound small wins into a direction you can trust.',
+    image: 'https://images.pexels.com/photos/6925404/pexels-photo-6925404.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    align: 'right' as const,
+    icon: Rocket,
+  },
 ];
-
-const colorMap: Record<string, { text: string; hover: string; bg: string }> = {
-  blue: { text: 'text-blue-500', hover: 'group-hover:text-blue-400', bg: 'from-blue-500/0 via-blue-500/30 to-purple-500/0' },
-  green: { text: 'text-green-500', hover: 'group-hover:text-green-400', bg: 'from-green-500/0 via-green-500/30 to-blue-500/0' },
-  purple: { text: 'text-purple-500', hover: 'group-hover:text-purple-400', bg: 'from-purple-500/0 via-purple-500/30 to-pink-500/0' },
-  cyan: { text: 'text-cyan-500', hover: 'group-hover:text-cyan-400', bg: 'from-cyan-500/0 via-cyan-500/30 to-blue-500/0' },
-};
 
 const FeaturesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-20 px-4">
-      <div className="max-w-6xl mx-auto py-12">
-        <AnimatedSection animation="fade-up">
-          <Link to="/" className="inline-flex items-center text-cyan-500 dark:text-cyan-400 hover:text-cyan-300 transition-colors mb-8 group">
-            <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-            Back to Home
-          </Link>
-        </AnimatedSection>
-
-        <AnimatedSection animation="fade-up">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-            How It Works
-          </h1>
-        </AnimatedSection>
-
-        <AnimatedSection delay={200} animation="fade-up">
-          <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-            Everything you need to go from confused beginner to confident builder — all in one place.
-          </p>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {features.map((feature, i) => {
-            const Icon = feature.icon;
-            const colors = colorMap[feature.color];
-            return (
-              <AnimatedSection key={i} delay={i * 150} animation="fade-up">
-                <Link
-                  to={feature.link}
-                  className="relative group bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 block h-full"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-r ${colors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                  <div className="relative z-10">
-                    <Icon className={`w-8 h-8 ${colors.text} mb-4 ${colors.hover} group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`} />
-                    <h3 className={`text-xl font-semibold mb-3 ${colors.hover} transition-colors duration-300`}>{feature.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">{feature.desc}</p>
-                  </div>
-                  <div className={`absolute inset-0 bg-gradient-to-r ${colors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse`}></div>
-                </Link>
-              </AnimatedSection>
-            );
-          })}
-        </div>
-
-        <AnimatedSection delay={600} animation="fade-up">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-200 dark:border-gray-800">
-              <Star className="w-10 h-10 text-yellow-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
-              <p className="text-gray-600 dark:text-gray-300">Thousands of beginners have found their path with Elyntric</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-200 dark:border-gray-800">
-              <Zap className="w-10 h-10 text-cyan-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Fast Start</h3>
-              <p className="text-gray-600 dark:text-gray-300">Get your personalized roadmap in minutes, not months</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-200 dark:border-gray-800">
-              <Headphones className="w-10 h-10 text-purple-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-              <p className="text-gray-600 dark:text-gray-300">Get help whenever you need it from elynAI</p>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection delay={800} animation="scale-up">
-          <div className="text-center">
-            <Link
-              to="/quiz"
-              className="relative group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 transform hover:-translate-y-1 overflow-hidden inline-flex items-center justify-center"
-            >
-              <span className="relative z-10 flex items-center">
-                Take the Quiz
-                <ArrowLeft className="w-5 h-5 ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-white/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+    <div className="bg-white text-slate-900 dark:bg-slate-950 dark:text-white">
+      {/* Hero */}
+      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden px-4 pt-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.pexels.com/photos/914931/pexels-photo-914931.jpeg?auto=compress&cs=tinysrgb&w=1600')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/60 to-slate-50 dark:to-slate-950" />
+        <div className="relative z-10 mx-auto max-w-3xl text-center text-white">
+          <AnimatedSection animation="fade-up">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5" /> How it works
+            </span>
+          </AnimatedSection>
+          <AnimatedSection delay={150} animation="fade-up">
+            <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">From confused to building, one step at a time.</h1>
+          </AnimatedSection>
+          <AnimatedSection delay={300} animation="fade-up">
+            <p className="mx-auto mt-5 max-w-xl text-base text-slate-200 md:text-lg">A guided path that meets beginners where they are and turns uncertainty into small, visible progress.</p>
+          </AnimatedSection>
+          <AnimatedSection delay={450} animation="scale-up">
+            <Link to="/quiz" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-transform hover:scale-105">
+              Take the quiz <ArrowRight className="h-4 w-4" />
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="px-4 py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">A clear route, not a maze of tabs</h2>
+          </AnimatedSection>
+          <AnimatedSection delay={150} animation="fade-up">
+            <p className="mt-5 text-slate-600 dark:text-slate-300">Most beginners stall because the plan is too big. Elyntric breaks the journey into four honest stages. Each one is small enough to finish and meaningful enough to matter.</p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Parallax stages */}
+      {stages.map((stage, index) => {
+        const Icon = stage.icon;
+        const isLeft = stage.align === 'left';
+        return (
+          <section key={stage.eyebrow} className="relative overflow-hidden">
+            {/* Parallax background band */}
+            <div
+              className="relative h-[55vh] min-h-[380px] w-full bg-cover bg-fixed bg-center"
+              style={{ backgroundImage: `url('${stage.image}')` }}
+            >
+              <div className="absolute inset-0 bg-slate-950/55" />
+              <div className="relative z-10 flex h-full items-center justify-center px-4">
+                <AnimatedSection animation="scale-up">
+                  <div className="text-center text-white">
+                    <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
+                      <Icon className="h-7 w-7" />
+                    </span>
+                    <p className="mt-5 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">{stage.eyebrow}</p>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </div>
+
+            {/* Content block */}
+            <div className="bg-white px-4 py-16 dark:bg-slate-950">
+              <div className="mx-auto max-w-5xl">
+                <div className={`grid grid-cols-1 items-center gap-10 md:grid-cols-2 ${isLeft ? '' : 'md:[&>div:first-child]:order-2'}`}>
+                  <AnimatedSection animation={isLeft ? 'slide-left' : 'slide-right'}>
+                    <div>
+                      <span className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-400">{stage.eyebrow}</span>
+                      <h3 className="mt-3 text-2xl font-bold tracking-tight md:text-3xl">{stage.title}</h3>
+                      <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">{stage.body}</p>
+                    </div>
+                  </AnimatedSection>
+                  <AnimatedSection delay={150} animation={isLeft ? 'slide-right' : 'slide-left'}>
+                    <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-xl dark:border-slate-800">
+                      <img src={stage.image} alt={stage.title} className="h-64 w-full object-cover md:h-80" loading="lazy" />
+                    </div>
+                  </AnimatedSection>
+                </div>
+              </div>
+            </div>
+            {index < stages.length - 1 && <div className="h-px w-full bg-slate-200 dark:bg-slate-800" />}
+          </section>
+        );
+      })}
+
+      {/* Closing CTA */}
+      <section className="px-4 py-20">
+        <div className="mx-auto max-w-3xl rounded-3xl bg-slate-900 p-10 text-center text-white shadow-2xl dark:bg-slate-800">
+          <Target className="mx-auto h-10 w-10 text-cyan-400" />
+          <h2 className="mt-5 text-3xl font-bold tracking-tight">Your path is waiting</h2>
+          <p className="mt-3 text-slate-300">Answer five quick questions and get a recommendation shaped by where you are today.</p>
+          <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link to="/quiz" className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105">Take the quiz <ArrowRight className="h-4 w-4" /></Link>
+            <Link to="/ai" className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">Ask elynAI</Link>
           </div>
-        </AnimatedSection>
-      </div>
+        </div>
+      </section>
+
+      {/* Back link */}
+      <section className="px-4 pb-16">
+        <div className="mx-auto max-w-5xl">
+          <Link to="/" className="group inline-flex items-center gap-2 text-sm font-medium text-cyan-600 transition-colors hover:text-cyan-400 dark:text-cyan-400">
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" /> Back to home
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

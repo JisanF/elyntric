@@ -85,7 +85,7 @@ function AppContent() {
           scrollToSection={scrollToSection}
         />
         {renderPage()}
-        <Footer scrollToSection={scrollToSection} />
+        {path !== '/ai' && <Footer scrollToSection={scrollToSection} />}
         <UniverseStyles />
       </div>
     </div>
