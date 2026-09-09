@@ -75,7 +75,7 @@ const FeaturesPage: React.FC = () => {
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">A clear route, not a maze of tabs</h2>
           </AnimatedSection>
           <AnimatedSection delay={150} animation="fade-up">
-            <p className="mt-5 text-slate-600 dark:text-slate-300">Most beginners stall because the plan is too big. Elyntric breaks the journey into four honest stages. Each one is small enough to finish and meaningful enough to matter.</p>
+            <p className="mt-5 text-slate-600 dark:text-slate-300">Most beginners stall because the plan is too big. elyntric breaks the journey into four honest stages. Each one is small enough to finish and meaningful enough to matter.</p>
           </AnimatedSection>
         </div>
       </section>

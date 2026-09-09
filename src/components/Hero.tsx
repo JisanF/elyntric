@@ -2,6 +2,7 @@ import React from 'react';
 import AnimatedSection from './AnimatedSection';
 import { Brain, ArrowRight } from 'lucide-react';
 import { Link } from '../router';
+import BrandName from './BrandName';
 const HeroBackground: React.FC = () => {
   return (
     <>
@@ -196,9 +197,7 @@ const HeroContent: React.FC = () => {
               <div className="absolute -inset-6 rounded-full bg-cyan-500/30 dark:bg-cyan-400/30 blur-[80px] opacity-0 group-hover:opacity-100 scale-100 group-hover:scale-500 transition-all duration-100 pointer-events-none z-0" />
             </div>
             <div className="relative overflow-hidden">
-              <span className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-500 via-white-500 to-gray-600 dark:from-cyan-400 dark:via-white-400 dark:to-gray-500 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-white-300 group-hover:to-gray-400 dark:group-hover:from-cyan-200 dark:group-hover:via-white-200 dark:group-hover:to-gray-300 transition-all duration-500 group-hover:scale-105">
-                Elyntric
-              </span>
+              <BrandName size="lg" />
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 group-hover:w-full transition-all duration-700 ease-out" />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
             </div>

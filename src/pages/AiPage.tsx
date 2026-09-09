@@ -189,27 +189,39 @@ const AiPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Input bar */}
+      {/* Input bar with animated gradient border */}
       <div className="shrink-0 px-3 pb-4 pt-2 sm:px-6">
         <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
-          <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 py-1.5 pl-5 pr-1.5 shadow-sm transition-all focus-within:border-cyan-500 focus-within:shadow-md dark:border-slate-700 dark:bg-slate-900">
-            <input
-              aria-label="Message elynAI"
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask elynAI anything..."
-              disabled={isLoading}
-              className="min-w-0 flex-1 bg-transparent text-sm text-slate-900 outline-none placeholder:text-slate-400 dark:text-white sm:text-[15px]"
+          <div className="group relative rounded-full">
+            {/* Animated gradient border */}
+            <div
+              className="absolute -inset-[2px] rounded-full opacity-60 group-focus-within:opacity-100 transition-opacity duration-300"
+              style={{
+                background: 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6, #ec4899, #06b6d4)',
+                backgroundSize: '300% 100%',
+                animation: 'brandGlow 3s linear infinite',
+              }}
             />
-            <button
-              type="submit"
-              aria-label="Send message"
-              disabled={isLoading || !input.trim()}
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-800 text-white transition-all hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-30 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
-            >
-              <ArrowUp className="h-5 w-5" />
-            </button>
+            {/* Inner container */}
+            <div className="relative flex items-center gap-2 rounded-full bg-slate-50 py-1.5 pl-5 pr-1.5 dark:bg-slate-900">
+              <input
+                aria-label="Message elynAI"
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Ask elynAI anything..."
+                disabled={isLoading}
+                className="min-w-0 flex-1 bg-transparent text-sm text-slate-900 outline-none placeholder:text-slate-400 dark:text-white sm:text-[15px]"
+              />
+              <button
+                type="submit"
+                aria-label="Send message"
+                disabled={isLoading || !input.trim()}
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-800 text-white transition-all hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-30 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
+              >
+                <ArrowUp className="h-5 w-5" />
+              </button>
+            </div>
           </div>
         </form>
       </div>

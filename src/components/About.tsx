@@ -2,21 +2,22 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Link } from '../router';
+import BrandName from './BrandName';
 
 const About: React.FC = () => {
   return (
     <section id="about" className="px-4 py-16 md:py-24">
       <div className="max-w-4xl mx-auto text-center">
         <AnimatedSection animation="fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
-            About Elyntric
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            About <BrandName size="md" />
           </h2>
         </AnimatedSection>
         
         <AnimatedSection delay={200} animation="fade-down">
           <p className="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300">
             We understand the overwhelming confusion that comes with starting an online business. 
-            That's why we created Elyntric - to cut through the noise and provide clear, actionable guidance.
+            That's why we created elyntric - to cut through the noise and provide clear, actionable guidance.
           </p>
         </AnimatedSection>
         

@@ -35,7 +35,7 @@ const Reviews: React.FC = () => {
           </AnimatedSection>
           <AnimatedSection delay={200} animation="scale-up">
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Elyntric is supported by incredible partners and sponsors who make it possible for a team of talented designers and engineers to maintain the framework full-time.
+              elyntric is supported by incredible partners and sponsors who make it possible for a team of talented designers and engineers to maintain the framework full-time.
             </p>
           </AnimatedSection>
         </div>

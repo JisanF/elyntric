@@ -23,6 +23,9 @@ export default {
 
         // Spiral animation for elynAI
         'spiral-rotate': 'spiralRotate 3s linear infinite',
+
+        // Brand name continuous gradient glow
+        'brand-glow': 'brandGlow 4s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -87,6 +90,12 @@ export default {
           '0%': { transform: 'rotate(0deg) scale(1)' },
           '50%': { transform: 'rotate(180deg) scale(1.1)' },
           '100%': { transform: 'rotate(360deg) scale(1)' },
+        },
+
+        // Brand name continuous gradient glow
+        brandGlow: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
     },

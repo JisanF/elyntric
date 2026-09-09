@@ -5,6 +5,7 @@ import FooterCompany from './footer/FooterCompany';
 import FooterFounder from './footer/FooterFounder';
 import Newsletter from './Newsletter';
 import { Link } from '../router';
+import BrandName from './BrandName';
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
@@ -47,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
           <div className="border-t border-gray-200 dark:border-gray-800 pt-4 lg:pt-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
               <p className="text-gray-600 dark:text-gray-400 text-center md:text-left text-base md:text-lg lg:text-base">
-                © 2025 Elyntric. All rights reserved.
+                © 2025 <BrandName size="sm" />. All rights reserved.
               </p>
               <div className="flex flex-wrap justify-center md:justify-end space-x-3 lg:space-x-4">
                 <Link

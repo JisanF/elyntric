@@ -2,6 +2,7 @@ import React from 'react';
 import { Brain, ArrowLeft, Target, Users, Shield, Zap, CheckCircle } from 'lucide-react';
 import { Link } from '../router';
 import AnimatedSection from '../components/AnimatedSection';
+import BrandName from '../components/BrandName';
 
 const AboutPage: React.FC = () => {
   return (
@@ -20,8 +21,8 @@ const AboutPage: React.FC = () => {
               <Brain className="w-12 h-12 text-cyan-500 dark:text-cyan-400 group-hover:text-cyan-300 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12" />
               <div className="absolute -inset-4 rounded-full bg-cyan-400/15 dark:bg-cyan-300/15 blur-2xl animate-ping pointer-events-none" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 dark:from-cyan-400 dark:via-blue-400 dark:to-purple-500 bg-clip-text text-transparent">
-              About Elyntric
+            <h1 className="text-4xl md:text-5xl font-bold">
+              About <BrandName size="xl" />
             </h1>
           </div>
         </AnimatedSection>
@@ -29,7 +30,7 @@ const AboutPage: React.FC = () => {
         <AnimatedSection delay={200} animation="fade-up">
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             We understand the overwhelming confusion that comes with starting an online business.
-            That's why we created Elyntric — to cut through the noise and provide clear, actionable guidance.
+            That's why we created elyntric — to cut through the noise and provide clear, actionable guidance.
           </p>
         </AnimatedSection>
 
@@ -91,11 +92,11 @@ const AboutPage: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">Privacy Policy</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
               We respect your privacy. We do not sell or share your personal data with third parties.
-              Any information you provide is used solely to improve your experience on Elyntric.
+              Any information you provide is used solely to improve your experience on elyntric.
             </p>
             <h3 className="text-xl font-semibold mb-4 mt-8">Terms of Service</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-              By using Elyntric, you agree to use the platform honestly and responsibly.
+              By using elyntric, you agree to use the platform honestly and responsibly.
               We provide guidance and tools, but your results depend on your own effort.
             </p>
             <h3 className="text-xl font-semibold mb-4 mt-8">Cookies</h3>

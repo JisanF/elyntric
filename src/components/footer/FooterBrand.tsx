@@ -2,6 +2,7 @@ import React from 'react';
 import { Brain, Mail } from 'lucide-react';
 import { FaFacebook, FaGithub, FaReddit, FaPinterest, FaTelegram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import BrandName from '../BrandName';
 
 interface FooterBrandProps {
   scrollToSection: (sectionId: string) => void;
@@ -22,9 +23,7 @@ const FooterBrand: React.FC<FooterBrandProps> = ({ scrollToSection }) => {
                 <div className="absolute inset-0 bg-cyan-500/20 dark:bg-cyan-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-200 animate-pulse"></div>
               </div>
               <div className="relative overflow-hidden">
-                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 dark:from-cyan-400 dark:via-blue-400 dark:to-purple-500 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-blue-300 group-hover:to-purple-400 dark:group-hover:from-cyan-200 dark:group-hover:via-blue-200 dark:group-hover:to-purple-300 transition-all duration-500 group-hover:scale-105">
-                  Elyntric
-                </span>
+                <BrandName size="md" />
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 group-hover:w-full transition-all duration-700 ease-out"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
               </div>
