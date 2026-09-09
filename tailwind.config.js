@@ -20,6 +20,9 @@ export default {
 
         // Hero Button
         'rotate-glow': 'rotateGlow 1s linear infinite',
+
+        // Spiral animation for elynAI
+        'spiral-rotate': 'spiralRotate 3s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -77,6 +80,13 @@ export default {
         rotateGlow: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+
+        // Spiral rotation for elynAI icon
+        spiralRotate: {
+          '0%': { transform: 'rotate(0deg) scale(1)' },
+          '50%': { transform: 'rotate(180deg) scale(1.1)' },
+          '100%': { transform: 'rotate(360deg) scale(1)' },
         },
       },
     },
