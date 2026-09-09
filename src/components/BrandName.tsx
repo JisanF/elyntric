@@ -15,7 +15,8 @@ const sizeClasses: Record<NonNullable<BrandNameProps['size']>, string> = {
 const BrandName: React.FC<BrandNameProps> = ({ className = '', size = 'md' }) => {
   return (
     <span
-      className={`font-bold bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-cyan-400 bg-[length:200%_auto] bg-clip-text text-transparent animate-brand-glow ${sizeClasses[size]} ${className}`}
+      className={`font-bold bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-cyan-400 bg-[length:200%_auto] bg-clip-text text-transparent animate-brand-cinematic ${sizeClasses[size]} ${className}`}
+      style={{ filter: 'drop-shadow(0 0 12px rgba(6,182,212,0.15))' }}
     >
       elyntric
     </span>

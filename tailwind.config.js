@@ -24,8 +24,8 @@ export default {
         // Spiral animation for elynAI
         'spiral-rotate': 'spiralRotate 3s linear infinite',
 
-        // Brand name continuous gradient glow
-        'brand-glow': 'brandGlow 4s ease-in-out infinite',
+        // Brand name slow cinematic gradient
+        'brand-cinematic': 'brandCinematic 12s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -92,10 +92,13 @@ export default {
           '100%': { transform: 'rotate(360deg) scale(1)' },
         },
 
-        // Brand name continuous gradient glow
-        brandGlow: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
+        // Brand name slow cinematic gradient flow
+        brandCinematic: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '25%': { backgroundPosition: '50% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+          '75%': { backgroundPosition: '50% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
       },
     },
