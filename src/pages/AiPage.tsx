@@ -105,7 +105,7 @@ const AiPage: React.FC = () => {
           <span className="relative flex h-9 w-9 items-center justify-center">
             <span className="absolute inset-0 animate-spiral-rotate rounded-full border-2 border-cyan-400/40 border-t-cyan-500 border-b-blue-500" />
             <span className="absolute inset-1 animate-spiral-rotate rounded-full border-2 border-blue-400/30 border-t-transparent border-b-purple-500" style={{ animationDirection: 'reverse', animationDuration: '2s' }} />
-            <span className="text-base">☠️</span>
+            <span className="text-base">💬</span>
           </span>
           <span className="text-base font-semibold text-slate-800 dark:text-slate-100">
             elynAI
@@ -156,7 +156,7 @@ const AiPage: React.FC = () => {
                 <div key={i} className={msg.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
                   {msg.role === 'assistant' && (
                     <div className="mr-3 mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-base">
-                      ☠️
+                      💬
                     </div>
                   )}
                   <div
@@ -173,7 +173,7 @@ const AiPage: React.FC = () => {
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="mr-3 mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 text-base">
-                    ☠️
+                    💬
                   </div>
                   <div className="rounded-3xl rounded-bl-md bg-slate-100 px-5 py-4 dark:bg-slate-800">
                     <div className="flex gap-1.5">
