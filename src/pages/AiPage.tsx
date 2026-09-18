@@ -30,7 +30,7 @@ const AiPage: React.FC = () => {
   const callGemini = async (userText: string): Promise<string> => {
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
     if (!apiKey) {
-      return "I'm not connected to my brain yet. Please add a Gemini API key to activate live responses.";
+      return "I'm not connected to my brain yet. Please message Jisan about the problem.";
     }
 
     const conversationHistory = [...messages, { role: 'user' as const, content: userText }];
@@ -198,7 +198,7 @@ const AiPage: React.FC = () => {
               className="absolute -inset-[2px] rounded-full"
               style={{
                 background: 'linear-gradient(90deg, rgba(6,182,212,0.12), rgba(59,130,246,0.12), rgba(139,92,246,0.12), rgba(6,182,212,0.12))',
-                animation: 'trainTrackGlow 3s ease-in-out infinite',
+                animation: 'trainTrackGlow 6s ease-in-out infinite',
               }}
             />
             {/* Train — travels around the rounded pill border continuously */}
@@ -209,7 +209,7 @@ const AiPage: React.FC = () => {
                 style={{
                   width: '16px',
                   height: '8px',
-                  animation: 'trainTravel 4s linear infinite',
+                  animation: 'trainTravel 18s linear infinite',
                 }}
               >
                 {/* Main train body */}
@@ -217,22 +217,22 @@ const AiPage: React.FC = () => {
                   className="relative w-full h-full rounded-[2px]"
                   style={{
                     background: 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6)',
-                    animation: 'trainGlowPulse 1.5s ease-in-out infinite',
+                    animation: 'trainGlowPulse 3s ease-in-out infinite',
                   }}
                 >
                   {/* Train headlight */}
                   <div
                     className="absolute -right-[3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-cyan-200"
-                    style={{ animation: 'trainSparkPulse 1s ease-in-out infinite' }}
+                    style={{ animation: 'trainSparkPulse 1.5s ease-in-out infinite' }}
                   />
                   {/* Smoke / trail sparks */}
                   <div
                     className="absolute -left-[2px] top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-blue-400"
-                    style={{ animation: 'trainSparkPulse 0.8s ease-in-out infinite', animationDelay: '0.2s' }}
+                    style={{ animation: 'trainSparkPulse 1.4s ease-in-out infinite', animationDelay: '1s' }}
                   />
                   <div
                     className="absolute -left-[5px] top-1/2 -translate-y-1/2 w-0.5 h-0.5 rounded-full bg-purple-400"
-                    style={{ animation: 'trainSparkPulse 0.6s ease-in-out infinite', animationDelay: '0.4s' }}
+                    style={{ animation: 'trainSparkPulse 1.6s ease-in-out infinite', animationDelay: '1s' }}
                   />
                 </div>
               </div>
