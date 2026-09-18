@@ -189,19 +189,54 @@ const AiPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Input bar with animated gradient border */}
+      {/* Input bar with glowing train traveling around the border */}
       <div className="shrink-0 px-3 pb-4 pt-2 sm:px-6">
         <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
           <div className="group relative rounded-full">
-            {/* Animated gradient border */}
+            {/* Glowing track (subtle outline) */}
             <div
-              className="absolute -inset-[2px] rounded-full opacity-60 group-focus-within:opacity-100 transition-opacity duration-300"
+              className="absolute -inset-[2px] rounded-full"
               style={{
-                background: 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6, #ec4899, #06b6d4)',
-                backgroundSize: '300% 100%',
-                animation: 'brandGlow 3s linear infinite',
+                background: 'linear-gradient(90deg, rgba(6,182,212,0.12), rgba(59,130,246,0.12), rgba(139,92,246,0.12), rgba(6,182,212,0.12))',
+                animation: 'trainTrackGlow 3s ease-in-out infinite',
               }}
             />
+            {/* Train — travels around the rounded pill border continuously */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Train engine with glow */}
+              <div
+                className="absolute"
+                style={{
+                  width: '16px',
+                  height: '8px',
+                  animation: 'trainTravel 4s linear infinite',
+                }}
+              >
+                {/* Main train body */}
+                <div
+                  className="relative w-full h-full rounded-[2px]"
+                  style={{
+                    background: 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6)',
+                    animation: 'trainGlowPulse 1.5s ease-in-out infinite',
+                  }}
+                >
+                  {/* Train headlight */}
+                  <div
+                    className="absolute -right-[3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-cyan-200"
+                    style={{ animation: 'trainSparkPulse 1s ease-in-out infinite' }}
+                  />
+                  {/* Smoke / trail sparks */}
+                  <div
+                    className="absolute -left-[2px] top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-blue-400"
+                    style={{ animation: 'trainSparkPulse 0.8s ease-in-out infinite', animationDelay: '0.2s' }}
+                  />
+                  <div
+                    className="absolute -left-[5px] top-1/2 -translate-y-1/2 w-0.5 h-0.5 rounded-full bg-purple-400"
+                    style={{ animation: 'trainSparkPulse 0.6s ease-in-out infinite', animationDelay: '0.4s' }}
+                  />
+                </div>
+              </div>
+            </div>
             {/* Inner container */}
             <div className="relative flex items-center gap-2 rounded-full bg-slate-50 py-1.5 pl-5 pr-1.5 dark:bg-slate-900">
               <input
