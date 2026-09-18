@@ -4,8 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from '../router';
 import BrandName from './BrandName';
 import SkullLogo from './SkullLogo';
-
-const HeroBackground: React.FC = () => <div />;
+import HeroBackground from './hero/HeroBackground';
 
 const Hero: React.FC = () => (
   <section id="hero" className="relative h-screen w-full overflow-hidden flex items-center justify-center px-4">
